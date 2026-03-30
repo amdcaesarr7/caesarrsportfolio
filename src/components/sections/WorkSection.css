@@ -1,0 +1,211 @@
+.work-section {
+  position: relative;
+  min-height: 100vh;
+  padding: 8rem 2rem;
+  background: #000;
+  overflow: hidden;
+}
+
+.work-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.work-showcase {
+  margin-bottom: 8rem;
+}
+
+.secondary-showcase {
+  margin-bottom: 6rem;
+}
+
+.work-heading-wrap {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.work-heading-text {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(2rem, 6vw, 4rem) !important;
+  font-weight: 800;
+  color: #fff;
+}
+
+.lyrics-heading {
+  background: linear-gradient(135deg, #fff 0%, #a0a0a0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+.video-container {
+  position: relative;
+  aspect-ratio: 9/16;
+  border-radius: 20px;
+  background: #111;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.05);
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s ease;
+  cursor: pointer;
+}
+
+.video-container:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5), 0 0 20px rgba(212,175,55,0.1);
+  border-color: rgba(212,175,55,0.3);
+}
+
+.lyrics-placeholder.video-placeholder {
+  border-color: rgba(130, 180, 245, 0.3);
+}
+
+.video-container:hover .lyrics-placeholder {
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5), 0 0 20px rgba(130, 180, 245, 0.1);
+  border-color: rgba(130, 180, 245, 0.3);
+}
+
+
+.video-light-rays {
+  position: absolute;
+  top: -10%;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  pointer-events: none;
+  z-index: 10;
+  mix-blend-mode: screen;
+}
+
+.video-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  background: linear-gradient(to bottom, #1a1a1a, #0a0a0a);
+}
+
+.play-button {
+  width: 60px;
+  height: 60px;
+  background: rgba(212,175,55,0.8);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 4px; /* optical center for triangle */
+  backdrop-filter: blur(4px);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.video-container:hover .play-button {
+  transform: scale(1.1);
+  background: #d4af37;
+}
+
+.lyrics-placeholder .play-button {
+  background: rgba(130, 180, 245, 0.8);
+}
+.video-container:hover .lyrics-placeholder .play-button {
+  background: #82b4f5;
+}
+
+.video-note {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.5);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+/* Analytics Strip */
+.analytics-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 6rem;
+  padding: 3rem;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 24px;
+  backdrop-filter: blur(10px);
+}
+
+.stat-card {
+  text-align: center;
+  position: relative;
+}
+
+.stat-card:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: -1rem;
+  top: 10%;
+  height: 80%;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.1), transparent);
+}
+
+.stat-number-wrap {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #fff 0%, #d4af37 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.stat-number {
+  font-variant-numeric: tabular-nums;
+}
+
+.stat-suffix {
+  font-size: 0.7em;
+  margin-left: 2px;
+}
+
+.stat-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-weight: 500;
+}
+
+@media (max-width: 1024px) {
+  .video-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .work-section { padding: 5rem 1.5rem; }
+  .video-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
+  
+  .analytics-strip {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding: 3rem 1.5rem;
+  }
+  .stat-card:not(:last-child)::after {
+    right: 10%; top: auto; bottom: -1.5rem; width: 80%; height: 1px;
+    background: linear-gradient(to right, transparent, rgba(255,255,255,0.1), transparent);
+  }
+}
