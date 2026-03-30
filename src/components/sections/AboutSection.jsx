@@ -22,15 +22,12 @@ const AboutSection = () => {
           <div className="about-image-col">
             <div className="about-image-container">
               <div className="about-image-glow" />
-              <div className="about-image-placeholder">
-                <div className="about-image-icon">
-                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(212,175,55,0.5)" strokeWidth="1">
-                    <circle cx="12" cy="8" r="4" />
-                    <path d="M5 20c0-4 3.5-7 7-7s7 3 7 7" />
-                  </svg>
-                </div>
-                <span className="about-image-note">Your animated image here</span>
-              </div>
+              <img
+                src="https://imgs.search.brave.com/x5GMB7o3tVz7If38-1tidB1e520SkIxbyU6QCKvoTK8/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jZG5p/Lmljb25zY291dC5j/b20vaWxsdXN0cmF0/aW9uL3ByZW1pdW0v/dGh1bWIvbWFsZS12/aWRlby1lZGl0b3It/aWxsdXN0cmF0aW9u/LXN2Zy1kb3dubG9h/ZC1wbmctODM0MTUx/NC5wbmc"
+                alt="Caesar Animated"
+                className="about-image-element"
+                style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'relative', zIndex: 1, borderRadius: '20px' }}
+              />
               <div className="about-image-border" />
             </div>
           </div>

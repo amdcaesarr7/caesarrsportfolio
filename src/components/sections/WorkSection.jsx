@@ -5,6 +5,16 @@ import ScrollFloat from '../animations/ScrollFloat';
 import LightRays from '../animations/LightRays';
 import './WorkSection.css';
 
+// Reel Videos
+import reel1 from '../../assets/reel1.mp4';
+import reel2 from '../../assets/reel2.mp4';
+import reel3 from '../../assets/reel3.mp4';
+
+// Lyrics Videos
+import lyrics1 from '../../assets/lyrics1.mp4';
+import lyrics2 from '../../assets/lyrics2.mp4';
+import lyrics3 from '../../assets/lyrics3.mp4';
+
 gsap.registerPlugin(ScrollTrigger);
 
 const StatItem = ({ endValue, suffix, label }) => {
@@ -60,8 +70,8 @@ const WorkSection = () => {
           </ScrollFloat>
           
           <div className="video-grid">
-            {[1, 2, 3].map((num) => (
-              <div key={`reel-${num}`} className="video-container interactive">
+            {[reel1, reel2, reel3].map((src, index) => (
+              <div key={`reel-${index}`} className="video-container interactive">
                 <div className="video-light-rays">
                   <LightRays
                     raysOrigin="top-center"
@@ -73,14 +83,14 @@ const WorkSection = () => {
                     mouseInfluence={0.15}
                   />
                 </div>
-                <div className="video-placeholder">
-                  <div className="play-button">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="#000">
-                      <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                    </svg>
-                  </div>
-                  <span className="video-note">Reel {num}</span>
-                </div>
+                <video 
+                  src={src} 
+                  autoPlay 
+                  loop 
+                  muted 
+                  playsInline
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                />
               </div>
             ))}
           </div>
@@ -99,8 +109,8 @@ const WorkSection = () => {
           </ScrollFloat>
           
           <div className="video-grid">
-            {[1, 2, 3].map((num) => (
-              <div key={`lyrics-${num}`} className="video-container interactive">
+            {[lyrics1, lyrics2, lyrics3].map((src, index) => (
+              <div key={`lyrics-${index}`} className="video-container interactive">
                 <div className="video-light-rays">
                   <LightRays
                     raysOrigin="top-center"
@@ -112,14 +122,14 @@ const WorkSection = () => {
                     mouseInfluence={0.15}
                   />
                 </div>
-                <div className="video-placeholder lyrics-placeholder">
-                  <div className="play-button">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="#000">
-                      <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                    </svg>
-                  </div>
-                  <span className="video-note">Lyrics Video {num}</span>
-                </div>
+                <video 
+                  src={src} 
+                  autoPlay 
+                  loop 
+                  muted 
+                  playsInline
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                />
               </div>
             ))}
           </div>
