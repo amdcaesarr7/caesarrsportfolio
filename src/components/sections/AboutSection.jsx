@@ -23,7 +23,7 @@ const AboutSection = () => {
             <div className="about-image-container">
               <div className="about-image-gloww" />
               <img
-                src="https://imgs.search.brave.com/uc-9jpgeytBP20OgrwI_Eq0UXu8r0grsw2gf-fYtJHQ/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jZG5p/Lmljb25zY291dC5j/b20vaWxsdXN0cmF0/aW9uL3ByZW1pdW0v/dGh1bWIvYm95LWlz/LWluLXNoY29rLW1v/b2QtaWxsdXN0cmF0/aW9uLWRvd25sb2Fk/LXN2Zy1wbmctZ2lm/LWZpbGUtZm9ybWF0/cy0tZnJ1c3RyYXRp/b24tYW5ncnktdW5o/YXBweS1zdHJlc3Nm/dWwtYWN0aXZpdHkt/cGFjay1wZW9wbGUt/aWxsdXN0cmF0aW9u/cy04NjA4ODYzLnBu/Zz9mPXdlYnA:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jZG5p/Lmljb25zY291dC5j/b20vaWxsdXN0cmF0/aW9uL3ByZW1pdW0v/dGh1bWIvbWFsZS12/aWRlby1lZGl0b3It/aWxsdXN0cmF0aW9u/LXN2Zy1kb3dubG9h/ZC1wbmctODM0MTUx/NC5wbmc"
+                src="https://imgs.search.brave.com/H2Gtj84TIV6hyrPwWQXbGFLV9Qx-ySROEFsxGtSwUDY/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jZG5p/Lmljb25zY291dC5j/b20vaWxsdXN0cmF0/aW9uL3ByZW1pdW0v/dGh1bWIvY3VyaW91/cy1ib3ktaXMtcGVl/a2luZy1wbGF5ZnVs/bHktdGhyb3VnaC1j/b2xvcmZ1bC1jdXJ0/YWlucy1maWxsZWQt/d2l0aC13b25kZXIt/YW5kLW1pc2NoaWVm/LWlsbHVzdHJhdGlv/bi1zdmctZG93bmxv/YWQtcG5nLTEzMzM0/MDQ1LnBuZw:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jZG5p/Lmljb25zY291dC5j/b20vaWxsdXN0cmF0/aW9uL3ByZW1pdW0v/dGh1bWIvbWFsZS12/aWRlby1lZGl0b3It/aWxsdXN0cmF0aW9u/LXN2Zy1kb3dubG9h/ZC1wbmctODM0MTUx/NC5wbmc"
                 alt="Caesar Animated"
                 className="about-image-element"
                 style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'relative', zIndex: 1, borderRadius: '20px' }}
